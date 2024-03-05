@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    color-scheme: light dark;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    @apply from-scheme-green-200 to-scheme-blue-200 bg-gradient-to-br;
+}
