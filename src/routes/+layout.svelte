@@ -1,15 +1,17 @@
 <script>
-    import {invalidate} from "$app/navigation";
-
-    export let data;
-    $: ({user} = data)
-
+    import {goto, invalidate} from "$app/navigation";
     import "$lib/app.css"
     import Button from "$lib/components/Button.svelte";
+    import {apiDomain} from "$lib/secrets/secrets.js";
 
     import {slide} from "svelte/transition";
-    import {sineIn} from "svelte/easing";
+    import {sineInOut} from "svelte/easing";
+    import HideOnSmallButton from "$lib/components/HideOnSmallButton.svelte";
 
+    let innerWidth = 2000;
+    let innerHeight = 2000;
+
+    export let data;
 
     /** *i fucking hate javascript*
      * @param {{is_authenticated:bool}} is_authenticated
@@ -20,21 +22,28 @@
      * @param {{bio:string}} bio
      * @param {{pfp:string}} pfp
      */
+    $: ({user} = data.layout)
 
     let collapsed = true;
 </script>
 
-<div class="h-[calc(100vh-66px)]">
-    <header class="bg-scheme-green-100 flex justify-between border-b-aquamarine border-b-2 w-full z-50">
+<svelte:window bind:innerHeight bind:innerWidth/>
+
+<div class="min-h-full">
+    <header class="bg-scheme-green-100 flex justify-between border-b-aquamarine border-b-2 w-full z-50 fixed">
+
         <div class="align-middle">
-            <button class="font-medium text-3xl p-2 align-middle h-full text-left" id="titleButton"
-                    onclick="document.location.href = '/';">
-                &lt;atomtables&gt;
-            </button>
+            {#if (collapsed || innerWidth > 768) && innerWidth > 420}
+                <button class="align-self-middle font-medium text-3xl p-2 align-middle h-full text-left" id="titleButton"
+                        transition:slide={{axis: 'x'}}>
+                    <a href="/">&lt;atomtables&gt;</a>
+                </button>
+                <noscript>Please Enable Javascript.</noscript>
+            {/if}
         </div>
-        <div class="my-0 h-full">
-            <Button url="/friend/list">Friends</Button>
-            <Button url="/admin">Admin</Button>
+        <div class="justify-self-end my-0 h-full">
+            <HideOnSmallButton url="/friend/list">Friends</HideOnSmallButton>
+            <HideOnSmallButton url="{apiDomain}/admin">Admin</HideOnSmallButton>
             {#if user.is_authenticated }
                 <!-- the user is considered to be logged in?-->
                 <div class="transition-all duration-250 font-medium text-md align-middle justify-center inline-flex h-full p-2 text-left button bg-scheme-green-200 hover:bg-scheme-green-300 active:bg-scheme-green-400 text-md text-white rounded-l-xl text-nowrap overflow-ellipsis"
@@ -52,20 +61,20 @@
                         {user.last_name}
                     </div>
                     {#if !collapsed}
-                        <div transition:slide={{axis: 'x', easing: sineIn}} class="pr-2"></div>
+                        <div transition:slide={{axis: 'x', easing: sineInOut}} class="pr-2"></div>
                         <div class="flex align-middle justify-between border-l-2 pl-1"
-                             transition:slide={{axis: 'x', easing: sineIn}}>
-                            <Button url="/account/profile" className="shadow-none">Account</Button>
+                             transition:slide={{axis: 'x', easing: sineInOut}}>
+                            <Button action="()">Account</Button>
                             <Button action={() => {
                                 fetch("/account/signout").then(response => response.text().then(body => {
                                     if (body === "1") {
-                                        alert("Success: signed out")
                                         invalidate("app:authentication")
+                                        goto("/")
                                     } else {
-                                        alert("Failed")
+                                        alert(`Unable to sign out, please try again later. (Error code ${body}}`)
                                     }
-                                }).catch(error => alert(error))).catch(error => alert(error))
-                            }} className="shadow-none">
+                                }).catch(alert)).catch(alert)
+                            }} hide={true}>
                                 Sign Out
                             </Button>
                         </div>
@@ -84,7 +93,8 @@
             {/if}
         </div>
     </header>
-    <div class="h-full">
+    <div class="min-h-[calc(100vh-66px)]">
+        <div class="pt-[66px]"/>
         <slot/>
     </div>
 </div>

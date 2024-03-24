@@ -1,15 +1,19 @@
-import {DOMAIN} from "$lib/secrets/secrets.js";
+import {apiDomain} from "$lib/secrets/secrets.js";
 
 export async function load({cookies, fetch, depends}) {
     depends("app:authentication")
 
-    let csrf = cookies.get("csrftoken");
-    let sid = cookies.get("sessionid");
+    const response = await fetch(`${apiDomain}/account/info`);
 
-    const response = await fetch(`${DOMAIN}/account/info`);
-    const u = await response.json();
-    u.info.pfp = DOMAIN + u.info.pfp;
-    return {
-        user: u.info
-    };
+    if (response.status === 204)
+        return {layout: {user: {is_authenticated: false}}}
+    else {
+        const u = await response.json();
+        u.info.pfp = apiDomain + u.info.pfp;
+        return {
+            layout: {
+                user: u.info
+            }
+        };
+    }
 }

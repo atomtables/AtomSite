@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@font-face {
+    font-family: "SF Pro";
+    src: url('/SF-Pro.ttf');
+}
 
 @tailwind base;
 @tailwind components;
@@ -6,10 +10,55 @@
 
 * {
     color-scheme: light dark;
-    font-family: "Inter", sans-serif;
+    font-family: "SF Pro", sans-serif;
 }
 
-body {
-    height: 100vh;
-    @apply from-scheme-green-200 to-scheme-blue-200 bg-gradient-to-br;
+@layer base {
+    #content-onepage {
+        height: calc(100vh - 66px)
+    }
+
+    h1 {
+        @apply text-3xl lg:text-5xl;
+    }
+
+    body {
+        min-width: 400px;
+        min-height: 100vh;
+        background: linear-gradient(145deg, rgb(40, 80, 40), rgb(20, 20, 80));
+        background-size: cover;
+        font-weight: 300;
+    }
+
+    .button-hide {
+        @apply shadow-none hidden md:inline-block;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl mt-3 font-bold;
+    }
+
+    h3 {
+        @apply text-xl mt-3 font-bold;
+    }
+
+    h4 {
+        @apply text-lg mt-3 font-bold;
+    }
+
+    h5 {
+        @apply text-base mt-3 font-bold;
+    }
+
+    h6 {
+        @apply text-sm mt-3 font-bold;
+    }
+
+    blockquote {
+        @apply bg-gray-800 p-2 m-2 border-l-4 border-white italic;
+    }
 }

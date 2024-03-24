@@ -1,7 +1,7 @@
 import {fail} from "@sveltejs/kit";
 import {redirect} from "@sveltejs/kit";
 import {setCookies} from "$lib/functions.js";
-import {DOMAIN} from "$lib/secrets/secrets.js";
+import {apiDomain} from "$lib/secrets/secrets.js";
 
 export const actions = {
     default: async ({cookies, request, fetch}) => {
@@ -12,7 +12,7 @@ export const actions = {
             return fail(422, {error: "Please provide a username and/or password."})
         }
 
-        const response = await fetch(`${DOMAIN}/account/signin`, {
+        const response = await fetch(`${apiDomain}/account/signin`, {
             method: "POST",
             body: JSON.stringify({
                 username: username,

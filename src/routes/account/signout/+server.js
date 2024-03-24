@@ -1,9 +1,9 @@
-import {DOMAIN} from "$lib/secrets/secrets.js";
+import {apiDomain} from "$lib/secrets/secrets.js";
 import {fail} from "@sveltejs/kit";
 import {setCookies} from "$lib/functions.js";
 
 export const GET = async ({ cookies, fetch }) => {
-    let response = await fetch(`${DOMAIN}/account/signout`)
+    let response = await fetch(`${apiDomain}/account/signout`)
 
     const u = await response.json();
     switch (u.code) {
