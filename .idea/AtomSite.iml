@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="atomtables_website" />
+    <orderEntry type="module" module-name="AtomSiteBackend" />
   </component>
 </module>

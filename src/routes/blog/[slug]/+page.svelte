@@ -1,6 +1,7 @@
 <script>
     import {marked} from 'marked';
     import {apiDomain} from '$lib/secrets/secrets.js';
+    import Button from "$lib/components/Button.svelte";
 
     let contentHtml;
 
@@ -31,7 +32,7 @@
 
     export let data;
 
-    $: ({author, title, subtitle, content, titleImage, titleCaption, blogImages, comments} = data.page?.blog)
+    $: ({author, title, subtitle, content, titleImage, titleCaption, blogImages, comments, likes} = data.page?.blog)
 
     $: {
         for (let i = 0; i < blogImages.count; i++) {
@@ -61,8 +62,9 @@
                     {@html contentHtml}
                 </div>
             </div>
-            <div class="w-full lg:w-1/3 bg-gray-900 m-3">
-                side2
+            <div class="w-full lg:w-1/3 bg-gray-900 m-3 p-5 rounded-2xl">
+                {likes} likes
+                <Button action="()">Like</Button>
             </div>
         </div>
     </div>
