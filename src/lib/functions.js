@@ -41,7 +41,16 @@ export function setCookies(cookies, setter) {
         if (Secure) {
             cookieOptions.secure = true;
         }
-
         setter.set(cookieName, cookieValue, cookieOptions);
     });
+}
+
+export function getCookies(cookies) {
+    let values = {}
+    cookies = cookies.trim().split(';')
+    for (let cookie of cookies) {
+        cookie = cookie.trim().split('=')
+        values[cookie[0].trim()] = cookie[1].trim()
+    }
+    return values
 }

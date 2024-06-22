@@ -6,7 +6,6 @@
 
     import {slide} from "svelte/transition";
     import {sineInOut} from "svelte/easing";
-    import HideOnSmallButton from "$lib/components/HideOnSmallButton.svelte";
 
     let innerWidth = 2000;
     let innerHeight = 2000;
@@ -22,7 +21,7 @@
      * @param {{bio:string}} bio
      * @param {{pfp:string}} pfp
      */
-    $: ({user} = data.layout)
+    $: ({user} = data.layout.header)
 
     let collapsed = true;
 </script>
@@ -42,8 +41,8 @@
             {/if}
         </div>
         <div class="justify-self-end my-0 h-full">
-            <HideOnSmallButton url="/friend/list">Friends</HideOnSmallButton>
-            <HideOnSmallButton url="{apiDomain}/admin">Admin</HideOnSmallButton>
+            <Button url="/friend/list" className="shadow-none hidden md:inline-block">Friends</Button>
+            <Button url="{apiDomain}/admin" className="shadow-none hidden md:inline-block">Admin</Button>
             {#if user.is_authenticated }
                 <!-- the user is considered to be logged in?-->
                 <div class="transition-all duration-250 font-medium text-md align-middle justify-center inline-flex h-full p-2 text-left button bg-scheme-green-200 hover:bg-scheme-green-300 active:bg-scheme-green-400 text-md text-white rounded-l-xl text-nowrap overflow-ellipsis"
@@ -93,7 +92,7 @@
             {/if}
         </div>
     </header>
-    <div class="min-h-[calc(100vh-66px)]">
+    <div class="min-h-[calc(100vh)]">
         <div class="pt-[66px]"/>
         <slot/>
     </div>

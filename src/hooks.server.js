@@ -1,9 +1,9 @@
 import {apiKey, apiDomain} from "$lib/secrets/secrets.js";
+import {getCookies} from "$lib/functions.js";
 
 export async function handleFetch({event, request, fetch}) {
     if (request.url.startsWith(apiDomain)) {
-		request.headers.set('csrftoken', event.request.headers.get('csrftoken'));
-        request.headers.set('sessionid', event.request.headers.get('sessionid'));
+		request.headers.set('cookie', event.request.headers.get('cookie'));
 		request.headers.set('Authorization', `Bearer ${apiKey}`);
 	}
 

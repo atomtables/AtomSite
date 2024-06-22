@@ -5,24 +5,26 @@
     import {slide} from "svelte/transition";
     import {sineInOut} from "svelte/easing";
 
+    import {typewriter} from "$lib/transitions/typewriter";
+
     let fromTo = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
     let mainElement = null;
 
+    let runAnimation = true;
     let yoyo = true;
     let duration = 4500;
-    let delay = 750;
+    let delay = 1500;
     let redelay = 150;
     let repeat = 1;
-    let runAnimation = true;
     let easing = "easingSinusoidalInOut";
-
-    let x;
-    let y;
 
     let innerWidth;
     let innerHeight;
 
+    let pageActive = false;
+
     onMount(async () => {
+        pageActive = true;
 
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && runAnimation) {
             setTimeout(() => {
@@ -161,7 +163,10 @@
     })
 
     function mousemove(e) {
-        mainElement.style.transform = `translate(${-((e.clientX * 3 - (innerWidth / 2)) / 100)}px, ${-((e.clientY * 3 - (innerHeight / 2)) / 100)}px)`
+        if (innerWidth > 1280)
+            mainElement.style.transform = `translate(${-((e.clientX * 3 - (innerWidth / 2)) / 100)}px, ${-((e.clientY * 3 - (innerHeight / 2)) / 100)}px)`
+        else
+            mainElement.style.transform = ''
     }
 </script>
 
@@ -210,11 +215,13 @@
         </svg>
     </div>
     <div class="align-middle content-center bg-[#001220] md:rounded-3xl bg-opacity-40 p-5 xl:w-1/2 md:h-1/2 h-full absolute flex justify-center items-center shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] shadow-black"
-         transition:slide={{easing: sineInOut}} bind:this={mainElement} style="transition: transform 0.5s ease-out;">
+         bind:this={mainElement} style="transition: transform 0.5s ease-out;" transition:slide={{"easing": sineInOut}}>
         <div class="flex md:flex-row flex-col">
             <img src="/atomtablesPicture.jpeg" alt="atomtables" class="w-48 h-48 p-2">
             <div>
-                <div class="font-bold text-3xl">Hello! I'm atomtables!</div>
+                    <div class="font-bold text-3xl" >
+                        Hello! I'm {#if pageActive}<div transition:typewriter class="inline">atomtables!</div>{/if}
+                    </div>
                 <div class="text-md my-2">
                     My name is Adithiya Venkatakrishnan, and I am an aspiring developer who likes to
                     create applications and make music in my free time! I am currently a high school student, and
@@ -222,7 +229,7 @@
                     worked on a couple projects. Check out my blog, where I talk about projects and tech news.
                 </div>
                 <Button url="/blog" className="bg-green-900">To the Blog!</Button>
-                <Button url="/blog" className="border-1">Some of my projects!</Button>
+                <Button url="/portfolio" className="border-1">Some of my projects!</Button>
             </div>
         </div>
     </div>

@@ -6,14 +6,14 @@ export async function load({cookies, fetch, depends}) {
     const response = await fetch(`${apiDomain}/account/info`);
 
     if (response.status === 204)
-        return {layout: {user: {is_authenticated: false}}}
+        return {layout: {header: {user: {is_authenticated: false}}}}
     else {
         const u = await response.json();
         u.info.pfp = apiDomain + u.info.pfp;
         return {
-            layout: {
+            layout: {header: {
                 user: u.info
-            }
+            }}
         };
     }
 }
