@@ -11,7 +11,7 @@
     export let hideContent;
 
     let backgroundIndex = 0;
-    let loops = 18;
+    let loops = 0;
     let int = setInterval(() => {
         if (backgroundIndex === -1) {
             hideContent = false
@@ -61,7 +61,7 @@
                     return;
                 }
                 if (innerWidth > 1280)
-                    transform = `translate(${-((e.clientX - innerWidth) / 50)}px, ${-((e.clientY - innerHeight) / 50)}px)`;
+                    transform = `translate(${-((e.clientX - innerWidth / 2) / 50)}px, ${-((e.clientY - innerHeight / 2) / 50)}px)`;
                 else transform = "";
             }
         }
@@ -70,6 +70,13 @@
     let mounted = false;
     onMount(() => {
         mounted = true;
+
+        let loaded = window.localStorage.getItem('loaded');
+        if (loaded === null || loaded === false || loaded === undefined) {
+            window.localStorage.setItem('loaded', 'true');
+        } else {
+            loops = 15;
+        }
     })
 
     let name1;
