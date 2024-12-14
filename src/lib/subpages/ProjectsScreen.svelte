@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="flex flex-col xl:absolute right-6 top-24 2xl:top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] xl:rounded-3xl"
-            style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
+             style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <!-- Outer Wrapper -->
             <div class="xl:relative bg-blend-darken xl:rounded-3xl font-bold text-5xl bg-opacity-40 -z-10 overflow-hidden">
@@ -44,8 +44,7 @@
                     <!-- Description Section -->
                     <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 backdrop-blur-xl">
                         An app designed to help students get a feel for how teachers are before they take their class.
-                        Similar to RateMyProfessor, but customised towards individual districts/schools having their
-                        own instance.
+                        Similar to RateMyProfessor, but customized towards districts/schools having their own instance.
                         <br><br>
                         <b>Award winner at HackJPS 2023.</b>
                     </div>
@@ -129,7 +128,7 @@
             </div>
         </div>
         <div class="flex flex-col xl:absolute -left-6 top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]"
-            style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
+             style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <div class="xl:relative bg-blend-darken xl:rounded-3xl font-bold text-5xl bg-opacity-40 -z-20 overflow-hidden">
                 <img
@@ -142,9 +141,9 @@
                         CollegeDebtSolver
                     </div>
                     <div class="justify-center items-center text-center font-normal text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 backdrop-blur-xl">
-                        An app designed to help people (primarily college students) to simply predict the possibilities
-                        of a given stock increasing or decreasing in value over the next month. Using a neural network
-                        and machine learning backend in Python, the app will be able to predict the stock market.
+                        An app designed to help people, primarily college students, predict the possibility of a stock
+                        increasing or decreasing in value over the next month. Using a neural network and machine
+                        learning backend in Python, the app was able to predict the stock market.
                         <br><br>
                         <b>Award winner at HackJPS 2024.</b>
                     </div>
