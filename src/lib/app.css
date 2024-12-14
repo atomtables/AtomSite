@@ -95,7 +95,7 @@
     body {
         min-width: 320px;
         min-height: 100vh;
-        font-weight: 300;
+        font-weight: 100;
     }
 
     .button-hide {

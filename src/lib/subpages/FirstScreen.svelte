@@ -193,21 +193,22 @@
                                 <div>
                                     About Me
                                 </div>
-                                <div class="font-semibold">
-                                    I'm Adithiya Venkatakrishnan, but I go with friends as Venky and online as
+                                <hr class="p-0 m-0 my-1 bg-gray-300">
+                                <div class="font-light">
+                                    I'm <b>Adithiya Venkatakrishnan</b>, but I go with friends as Venky and online as
                                     atomtables.
                                     <br><br>
-                                    I'm a high school sophomore who's passionate about the world of software
-                                    development, cybersecurity, and general computer science. Check out my projects
+                                    I'm a <b>high school sophomore</b> who's passionate about the world of <b>software
+                                    development, cybersecurity, and general computer science</b>. Check out my projects
                                     below!
                                     <br><br>
                                     I've been coding since I was about seven years old, and my main interests lie in
-                                    mobile app development, web development, and low-level programming.
+                                    <b>mobile app development, web development, and low-level programming</b>.
                                     <br><br>
-                                    I like music a lot, and I sing and play the piano (I'm working on some stuff right
-                                    now).
+                                    <b>I like music a lot</b>, and I sing and play the piano (<b>I'm working on some stuff right
+                                    now</b>).
                                     <br><br>
-                                    I go to Edison Academy Magnet School, and I'm on the Computer Science Club Council
+                                    I go to <b>Edison Academy Magnet School</b>, and I'm on the Computer Science Club Council
                                     there. I also write articles for the Eagle Eye and the school newspaper, especially
                                     for the Tech topics.
                                 </div>
@@ -216,10 +217,11 @@
                                 <div class="bg-[#001220] md:rounded-3xl bg-opacity-60 p-5 flex flex-col justify-center w-full"
                                      bind:this={socials}
                                 >
-                                    <div class="mb-2">
+                                    <div class="">
                                         My Socials
                                     </div>
-                                    <div class="hidden flex-col h-full w-full space-y-1 lg:flex">
+                                    <hr class="p-0 m-0 my-1 bg-gray-300">
+                                    <div class="hidden mt-2 flex-col h-full w-full space-y-1 lg:flex">
                                         {#if socialsIO}
                                             <a class="rounded-2xl p-2 bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-700 flex flex-row h-1/2 items-center"
                                                href="//github.com/atomtables"
@@ -273,7 +275,7 @@
                                             </a>
                                         {/if}
                                     </div>
-                                    <div class="flex flex-row h-full w-full space-x-2 lg:hidden">
+                                    <div class="mt-2 flex flex-row h-full w-full space-x-2 lg:hidden">
                                         <div class="flex flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-1 h-full w-1/2">
                                             <a class="flex-1 rounded-2xl p-2 bg-neutral-900 flex flex-row md:flex-col items-center justify-center md:justify-normal"
                                                href="//github.com/atomtables"
@@ -330,13 +332,14 @@
                         </div>
                         <div class="flex flex-col w-full md:w-1/3 lg:w-1/2 space-y-2">
                             <IObserver element={programming} bind:intersecting={programmingIO} once>
-                                <div class="bg-[#001220] w-full md:rounded-3xl bg-opacity-60 p-3"
+                                <div class="bg-[#001220] w-full md:rounded-3xl bg-opacity-60 p-5"
                                      bind:this={programming}
                                 >
-                                    <div class="px-2 mb-1">
+                                    <div class="mb-1">
                                         Programming Languages and Tools
                                     </div>
-                                    <div class="grid grid-rows-2 grid-cols-3 sm:grid-cols-6 [grid-auto-rows:0px] overflow-hidden">
+                                    <hr class="p-0 m-0 my-1 bg-gray-300">
+                                    <div class="mt-2 grid grid-rows-2 grid-cols-3 sm:grid-cols-6 [grid-auto-rows:0px] overflow-hidden">
                                         <div class="flex flex-row bg-orange-900 rounded-2xl p-2 aspect-square mx-1 my-1"
                                              transition:blur={{duration: 500, delay: 250}}
                                         >
@@ -440,6 +443,7 @@
                                 <div>
                                     Stats about me
                                 </div>
+                                <hr class="p-0 m-0 my-1 bg-gray-300">
                                 <div class="mt-2 flex flex-col lg:block">
                                     <img
                                             src="https://github-readme-stats.vercel.app/api/top-langs?username=atomtables&show_icons=true&theme=dark&locale=en&layout=compact"
@@ -470,6 +474,7 @@
                                     <div>
                                         Organisations
                                     </div>
+                                    <hr class="p-0 m-0 my-1 bg-gray-300">
                                     {#if organisationsIO}
                                         <div class="flex flex-col mt-2 h-[calc(100%-32px)] w-full space-y-2">
                                             <a class="flex flex-col lg:flex-row items-center bg-green-900 md:rounded-3xl bg-opacity-60 hover:bg-opacity-100 p-5"

@@ -25,7 +25,7 @@
             {#if (collapsed || innerWidth > 768) && innerWidth > 370}
                 <div class="align-self-middle font-medium text-3xl align-middle h-full text-left" id="titleButton"
                         transition:slide={{axis: 'x'}}>
-                    <a href="/">&lt;atomtables&gt;</a>
+                    <a href="/"><b>&lt;atomtables&gt;</b></a>
                 </div>
             {/if}
         </div>

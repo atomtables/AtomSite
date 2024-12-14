@@ -42,7 +42,7 @@
                         RateMyTeachers
                     </div>
                     <!-- Description Section -->
-                    <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 backdrop-blur-xl">
+                    <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5 backdrop-blur-xl">
                         An app designed to help students get a feel for how teachers are before they take their class.
                         Similar to RateMyProfessor, but customized towards districts/schools having their own instance.
                         <br><br>
@@ -140,7 +140,7 @@
                     <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5 backdrop-blur-xl">
                         CollegeDebtSolver
                     </div>
-                    <div class="justify-center items-center text-center font-normal text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 backdrop-blur-xl">
+                    <div class="justify-center items-center text-center font-normal text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5 backdrop-blur-xl">
                         An app designed to help people, primarily college students, predict the possibility of a stock
                         increasing or decreasing in value over the next month. Using a neural network and machine
                         learning backend in Python, the app was able to predict the stock market.
@@ -211,7 +211,7 @@
                target="_blank" rel="noopener noreferrer"
             >
                 <img src="/images/devpost.png" alt="Devpost"
-                     class="h-16 mr-2 rounded-full">
+                     class="h-16 mr-2 xl:mr-0 xl:ml-2 rounded-full">
                 <div class="flex flex-col">
                     <div class="">Original submission on</div>
                     <div class="font-bold text-2xl">Devpost</div>
