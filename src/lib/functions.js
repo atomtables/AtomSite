@@ -54,3 +54,42 @@ export function getCookies(cookies) {
     }
     return values
 }
+
+export let events = {
+    preventDefault: function(e) {
+        e = e || window.event;
+        if (e.preventDefault) e.preventDefault();
+        e.returnValue = false;
+    },
+
+    //spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36,
+    //left: 37, up: 38, right: 39, down: 40
+    keys: [32, 33, 34, 35, 36, 37, 38, 39, 40],
+    keydown: function(e) {
+        for (var i = events.keys.length; i--;) {
+            if (e.keyCode === events.keys[i]) {
+                events.preventDefault(e);
+                return;
+            }
+        }
+    },
+
+    wheel: function(e) {
+        events.preventDefault(e);
+    },
+
+    disable: function() {
+        if (window.addEventListener) {
+            window.addEventListener('DOMMouseScroll', events.wheel, { passive: false });
+        }
+        window.onmousewheel = document.onmousewheel = events.wheel;
+        document.onkeydown = this.keydown;
+    },
+
+    enable: function() {
+        if (window.removeEventListener) {
+            window.removeEventListener('DOMMouseScroll', events.wheel, { passive: false });
+        }
+        window.onmousewheel = document.onmousewheel = document.onkeydown = null;
+    }
+}
