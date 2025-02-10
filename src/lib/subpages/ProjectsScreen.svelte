@@ -2,12 +2,12 @@
     import picture from "$lib/backgrounds/Yosemite_5.jpg";
     import picture2 from "$lib/backgrounds/Galaxy.jpg";
 
-    export let transform
+    export let transform;
 </script>
 
 <!-- hackjps 2023 -->
 <div
-        class="relative flex flex-col items-center justify-center xl:h-screen xl:w-5/6 mx-auto xl:[margin-top:calc(-6rem)] xl:[margin-bottom:calc(-6rem)] transition-all z-40"
+        class="relative flex flex-col items-center justify-center xl:h-screen xl:max-w-7xl w-full mx-auto xl:[margin-top:calc(-6rem)] xl:[margin-bottom:calc(-6rem)] transition-all z-40"
         aria-label="When your mouse moves, the atomtables element moves with it."
 >
     <div
@@ -21,28 +21,19 @@
             </div>
             <div class="opacity-100 group-hover:opacity-50 transition-all xl:absolute xl:top-48 xl:left-48 xl:p-5 group-hover:p-0 xl:bg-neutral-500 group-hover:bg-none xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
                 <img src="ratemyteachers1.png" alt="Rate My Teachers"
-                     class="lg:h-96 transition-all w-full object-contain">
+                     class="lg:h-96 transition-all object-contain">
             </div>
         </div>
         <div class="flex flex-col xl:absolute right-6 top-24 2xl:top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] xl:rounded-3xl"
              style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
-            <!-- Outer Wrapper -->
             <div class="xl:relative bg-blend-darken xl:rounded-3xl font-bold text-5xl bg-opacity-40 -z-10 overflow-hidden">
-                <!-- Image as Background -->
-                <img
-                        src={picture}
-                        alt="Background"
-                        class="bg-black opacity-75 absolute inset-0 w-full h-full object-cover xl:rounded-3xl"
-                />
-                <!-- Text Content Wrapper -->
-                <div class="relative flex flex-col xl:rounded-3xl">
-                    <!-- Title Section -->
-                    <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5 backdrop-blur-xl">
+                <div class="relative flex flex-col xl:rounded-3xl backdrop-blur-xl">
+                    <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5">
                         RateMyTeachers
                     </div>
-                    <!-- Description Section -->
-                    <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5 backdrop-blur-xl">
+                    <hr class="p-0 m-0">
+                    <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5">
                         An app designed to help students get a feel for how teachers are before they take their class.
                         Similar to RateMyProfessor, but customized towards districts/schools having their own instance.
                         <br><br>
@@ -51,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col items-center xl:items-end xl:absolute right-6 top-[32rem] z-10 w-full xl:w-max bg-green-900 bg-opacity-40 p-2 xl:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+        <div class="flex flex-col items-center xl:items-end xl:absolute right-6 top-[32rem] z-10 w-full xl:w-max backdrop-blur-xl bg-opacity-40 p-2 xl:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
             <div class="flex flex-row my-2 space-x-2">
                 <img src="https://camo.githubusercontent.com/59f72f50a3ffa6ac9cd8389aa99e8e67f637abcbe50ae7fb0dc4b876d91a70e2/68747470733a2f2f7777772e7376677265706f2e636f6d2f73686f772f3335333635372f646a616e676f2d69636f6e2e737667"
                      alt="Django"
@@ -67,7 +58,7 @@
                 Made with Django, Jinja2, and Bootstrap5
             </div>
         </div>
-        <div class="flex flex-row flex-wrap justify-center xl:flex-col xl:absolute top-[24rem] z-10 w-full xl:w-max bg-green-900 bg-opacity-40 p-2 xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+        <div class="flex flex-row flex-wrap justify-center xl:flex-col xl:absolute top-[24rem] z-10 w-full xl:w-max backdrop-blur-xl bg-opacity-40 p-2 xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
             <a class="m-1 rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] p-2 bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-700 flex flex-row items-center"
                href={`//github.com/atomtables/rate-my-teachers`}
                target="_blank" rel="noopener noreferrer"
@@ -110,7 +101,7 @@
 
 <!-- hackjps 2024 -->
 <div
-        class="relative flex flex-col items-center justify-center xl:h-screen xl:w-5/6 mx-auto xl:[margin-top:calc(-6rem)] xl:[margin-bottom:calc(-6rem)] transition-all z-40"
+        class="relative flex flex-col items-center justify-center xl:h-screen xl:max-w-7xl w-full mx-auto xl:[margin-top:calc(-6rem)] xl:[margin-bottom:calc(-6rem)] transition-all z-40"
         aria-label="When your mouse moves, the atomtables element moves with it."
 >
     <div
@@ -122,9 +113,9 @@
                 <img src="collegedebtsolver2.png" alt="CollegeDebtSolver"
                      class="h-96 transition-all">
             </div>
-            <div class="opacity-100 group-hover:opacity-50 transition-all xl:absolute xl:right-auto xl:top-48 xl:left-48 xl:p-5 group-hover:p-0 xl:bg-neutral-500 group-hover:bg-none xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+            <div class="opacity-100 group-hover:opacity-50 transition-all xl:absolute  xl:top-48 xl:right-48 xl:p-5 group-hover:p-0 xl:bg-neutral-500 group-hover:bg-none xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
                 <img src="collegedebtsolver1.png" alt="CollegeDebtSolver"
-                     class="h-96 transition-all w-full object-contain">
+                     class="h-96 transition-all object-contain">
             </div>
         </div>
         <div class="flex flex-col xl:absolute -left-6 top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]"

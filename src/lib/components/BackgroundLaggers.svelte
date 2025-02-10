@@ -9,34 +9,6 @@
 
     let waves;
 
-    onMount(() => {
-        if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-            waves = WAVES({
-                THREE: THREE,
-                el: "#background",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x0b481c,
-                backgroundAlpha: 0,
-            });
-        }
-        setTimeout(() => {
-            val = false;
-            setTimeout(() => {
-                waves.destroy();
-            }, 500)
-        }, 10000)
-    })
-
-    onDestroy(() => {
-        waves.destroy();
-    })
-
     let val = true
 
     let innerWidth, innerHeight;
@@ -205,8 +177,3 @@
         </g>
     </svg>
 </div>
-{#if val}
-    <div class="w-screen h-screen fixed -z-10" id="background" transition:blur={{duration: 500, easing: quadInOut}}>
-
-    </div>
-{/if}

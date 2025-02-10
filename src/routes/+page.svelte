@@ -25,11 +25,11 @@
         mounted = true;
         preloadedImages = preloadImages();
     });
+
+    let innerWidth, innerHeight;
 </script>
 
-{#if preloadedImages}
-    <BackgroundLaggers {innerWidth} {innerHeight}/>
-    <MainContent bind:preloadedImages />
-{:else}
-    <div>Loading...</div>
-{/if}
+<svelte:window bind:innerWidth bind:innerHeight/>
+
+<BackgroundLaggers {innerWidth} {innerHeight}/>
+<MainContent bind:preloadedImages />
