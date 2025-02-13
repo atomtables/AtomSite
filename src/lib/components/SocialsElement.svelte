@@ -31,9 +31,9 @@ let socialsSource = [
     {
         "image": "/images/icloud.png",
         "alt": "iCloud",
-        "url": "mailto:atomtables@icloud.com",
+        "url": "mailto:",
         "text": "Email me if you really want at",
-        "link": "atomtables@icloud.com",
+        "link": "atomtables (at) icloud (dot) com",
         "color": "bg-cyan-800 hover:bg-cyan-700 active:bg-cyan-600"
     }
 ]
