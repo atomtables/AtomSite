@@ -24,19 +24,19 @@
         <div class="align-middle">
             {#if (collapsed || innerWidth > 768) && innerWidth > 370}
                 <div class="align-self-middle font-medium text-3xl align-middle h-full text-left" id="titleButton"
-                        transition:slide={{axis: 'x'}}>
+                     transition:slide={{axis: 'x'}}>
                     <a href="/"><b>&lt;atomtables&gt;</b></a>
                 </div>
             {/if}
         </div>
-<!--        <div class="justify-self-end my-2 h-full">-->
-<!--            <Button url="/portfolio">Portfolio</Button>-->
-<!--            <Button url="/ping">Ping</Button>-->
-<!--        </div>-->
+        <!--        <div class="justify-self-end my-2 h-full">-->
+        <!--            <Button url="/portfolio">Portfolio</Button>-->
+        <!--            <Button url="/ping">Ping</Button>-->
+        <!--        </div>-->
     </header>
     <div class="min-h-screen w-full">
         <div class="pt-[54px]"></div>
-        <BackgroundLaggers />
+        <BackgroundLaggers/>
         <slot/>
     </div>
     <footer class="relative w-full bg-neutral-800 mt-24 p-12 h-max">

@@ -60,7 +60,7 @@
                 style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <div class="w-full h-full">
-                <div class="h-96 flex flex-col w-full relative md:rounded-t-3xl lg:px-0 truncate">
+                <div class="h-96 flex flex-col w-full relative md:rounded-t-3xl lg:px-0 truncate max-lg:my-5">
                     {#if backgroundIndex !== -1}
                         <div class="h-full flex flex-col w-full lg:flex-row relative m-0 justify-center lg:mx-auto lg:items-center" out:slide={{axis: 'x'}}>
                             {#if preloadedImages}
