@@ -62,6 +62,7 @@
         </div>
 
         <div class="lg:pt-[50px]"></div>
+        <div class="pt-12" id="projects"></div>
 
         <div class="bg-[#001220] bg-opacity-50 text-center  p-12 max-w-full overflow-hidden backdrop-blur-xl">
             <h1 class="text-4xl font-bold pb-6">Featured Projects</h1>
