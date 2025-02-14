@@ -44,6 +44,5 @@
         <br>
         My Github: <a href="//github.com/atomtables" target="_blank" rel="noopener noreferrer" class="underline">atomtables</a>
         <br>
-        Thank you to Apple for the pictures used here.
     </footer>
 </div>
