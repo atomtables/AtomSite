@@ -5,7 +5,13 @@
     export let transform;
 </script>
 
-<!-- hackjps 2023 -->
+<!-- <div class="bg-green-900 bg-opacity-50 justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5">
+                        A YouTube client for Windows Phone 8.1. Yeah. Uses the Invidious API to fetch YouTube data, such as video streams, comments, channels, and metadata.
+                        <br><br>
+                        I had to remake this app from scratch after losing the original source code in 2023.
+                    </div> -->
+
+<!-- eighttube -->
 <div
         class="relative flex flex-col items-center justify-center xl:h-screen xl:max-w-7xl w-full mx-auto xl:[margin-top:calc(-6rem)] xl:[margin-bottom:calc(-6rem)] transition-all z-40"
         aria-label="When your mouse moves, the atomtables element moves with it."
@@ -28,12 +34,12 @@
              style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <div class="xl:relative bg-blend-darken xl:rounded-3xl font-bold text-5xl bg-opacity-40 -z-10 overflow-hidden">
-                <div class="relative flex flex-col xl:rounded-3xl backdrop-blur-xl">
+                <div class="relative flex flex-col xl:rounded-3xl backdrop-blur-xl min-w-[32rem]">
                     <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5">
                         RateMyTeachers
                     </div>
                     <hr class="p-0 m-0">
-                    <div class="justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5">
+                    <div class="bg-green-900 bg-opacity-50 justify-center items-center font-normal text-center text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5">
                         An app designed to help students get a feel for how teachers are before they take their class.
                         Similar to RateMyProfessor, but customized towards districts/schools having their own instance.
                         <br><br>
@@ -118,20 +124,16 @@
                      class="h-96 transition-all object-contain">
             </div>
         </div>
-        <div class="flex flex-col xl:absolute -left-6 top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]"
+        <div class="flex flex-col xl:absolute -left-6 top-12 z-10 w-full xl:w-min shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] xl:rounded-3xl"
              style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <div class="xl:relative bg-blend-darken xl:rounded-3xl font-bold text-5xl bg-opacity-40 -z-20 overflow-hidden">
-                <img
-                        src={picture2}
-                        alt="Background"
-                        class="bg-black opacity-75 absolute inset-0 w-full h-full object-cover xl:rounded-3xl"
-                />
-                <div class="relative flex flex-col">
-                    <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5 backdrop-blur-xl">
+                <div class="relative flex flex-col backdrop-blur-xl rounded-3xl">
+                    <div class="flex justify-center items-center font-semibold text-2xl sm:text-4xl md:text-6xl h-min bg-cover bg-center xl:rounded-t-2xl p-5">
                         CollegeDebtSolver
                     </div>
-                    <div class="justify-center items-center text-center font-normal text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5 backdrop-blur-xl">
+                    <hr class="p-0 m-0">
+                    <div class="justify-center items-center text-center font-normal text-2xl h-min bg-cover bg-center xl:rounded-b-2xl p-5 px-8 lg:px-5 bg-green-900 bg-opacity-50">
                         An app designed to help people, primarily college students, predict the possibility of a stock
                         increasing or decreasing in value over the next month. Using a neural network and machine
                         learning backend in Python, the app was able to predict the stock market.
@@ -141,7 +143,7 @@
                 </div>
             </div>
         </div> <!-- left-6 -bottom-60 -->
-        <div class="flex flex-col items-center xl:items-start xl:absolute top-[32rem] z-10 w-full xl:w-max bg-green-900 bg-opacity-40 p-2 xl:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+        <div class="flex flex-col items-center xl:items-start xl:absolute top-[32rem] z-10 w-full xl:w-max backdrop-blur-xl bg-opacity-40 p-2 xl:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
             <div class="flex flex-row my-2 space-x-2">
                 <img src="https://avatars.githubusercontent.com/u/156354296?s=200&v=4"
                      alt="FastAPI"
@@ -157,13 +159,13 @@
                 Made with FastAPI, SvelteKit, and TensorFlow
             </div>
         </div>
-        <div class="flex flex-col items-start xl:absolute top-6 right-6 z-10 w-full xl:w-max bg-green-900 bg-opacity-40 p-2 lg:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+        <div class="flex flex-col items-start xl:absolute top-6 right-6 z-10 w-full xl:w-max backdrop-blur-xl bg-opacity-40 p-2 lg:rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
             <div class="text-xl font-medium w-full text-center xl:text-right">
                 In collaboration with Nathaniel George, <br class="hidden xl:block">
                 Alexander Poon, and Arnav Daine
             </div>
         </div>
-        <div class="flex flex-row flex-wrap justify-center xl:flex-col xl:absolute right-0 top-[20rem] z-10 w-full xl:w-max bg-green-900 bg-opacity-40 p-2 xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
+        <div class="flex flex-row flex-wrap justify-center xl:flex-col xl:absolute right-0 top-[20rem] z-10 w-full xl:w-max backdrop-blur-xl bg-opacity-40 p-2 xl:rounded-2xl xl:shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)]">
             <a class="m-1 rounded-2xl shadow-[0_0_50px_0px_rgb(0_0_0_/_0.25)] p-2 bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-700 flex flex-row xl:flex-row-reverse text-left xl:text-right items-center"
                href={`//github.com/atomtables/CollegeDebtSolverFrontend`}
                target="_blank" rel="noopener noreferrer"

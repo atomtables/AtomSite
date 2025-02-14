@@ -27,6 +27,7 @@
 		"body-scroll-lock": "^4.0.0-beta.0",
 		"kute.js": "^2.2.4",
 		"marked": "^12.0.1",
+		"svelte-fast-marquee": "^0.8.0",
 		"svelte-intersection-observer": "^1.0.0",
 		"svelte-material-icons": "^3.0.5"
 	}

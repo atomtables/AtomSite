@@ -7,12 +7,9 @@
     import * as THREE from 'three';
     import WAVES from 'vanta/dist/vanta.waves.min.js';
 
-    let waves;
-
     let val = true
 
     let innerWidth, innerHeight;
-    $: innerWidth && innerHeight && waves && waves.resize();
 
     // onMount(() => {
     //     setTimeout(() => {

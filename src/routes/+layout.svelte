@@ -10,9 +10,9 @@
     let innerWidth = 2000;
     let innerHeight = 2000;
 
-    export let data;
-
     let collapsed = true;
+
+
 </script>
 
 <svelte:window bind:innerHeight bind:innerWidth/>
@@ -34,7 +34,16 @@
 <!--            <Button url="/ping">Ping</Button>-->
 <!--        </div>-->
     </header>
-    <div class="min-h-screen">
+    <div class="min-h-screen w-full">
+        <div class="pt-[54px]"></div>
+        <BackgroundLaggers />
         <slot/>
     </div>
+    <footer class="relative w-full bg-neutral-800 mt-24 p-12 h-max">
+        Adithiya Venkatakrishnan
+        <br>
+        My Github: <a href="//github.com/atomtables" target="_blank" rel="noopener noreferrer" class="underline">atomtables</a>
+        <br>
+        Thank you to Apple for the pictures used here.
+    </footer>
 </div>

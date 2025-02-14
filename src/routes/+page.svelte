@@ -27,9 +27,18 @@
     });
 
     let innerWidth, innerHeight;
+    $: innerWidth, innerHeight;
+    function mousemove(e) {
+        if (mounted) {
+            if (e == null) transform = "";
+            else if (innerWidth > 1280) transform = `translate(${-((e.clientX - innerWidth / 2) / 50)}px, ${-((e.clientY - innerHeight / 2) / 50)}px)`;
+            else transform = "";
+        }
+    }
+
+    let transform = "";
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight/>
+<svelte:window bind:innerWidth bind:innerHeight on:mousemove={mousemove} />
 
-<BackgroundLaggers {innerWidth} {innerHeight}/>
-<MainContent bind:preloadedImages />
+<MainContent bind:preloadedImages bind:transform />

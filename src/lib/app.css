@@ -12,6 +12,7 @@
 @layer base {
     * {
         box-sizing: border-box;
+        scroll-behavior: smooth;
         @apply transition-all text-white;
     }
 
@@ -34,19 +35,37 @@
     }
 
     @-webkit-keyframes backgroundkeyframe {
-        0%{background-position:94% 0}
-        50%{background-position:7% 100%}
-        100%{background-position:94% 0}
+        0% {
+            background-position: 94% 0
+        }
+        50% {
+            background-position: 7% 100%
+        }
+        100% {
+            background-position: 94% 0
+        }
     }
     @-moz-keyframes backgroundkeyframe {
-        0%{background-position:94% 0}
-        50%{background-position:7% 100%}
-        100%{background-position:94% 0}
+        0% {
+            background-position: 94% 0
+        }
+        50% {
+            background-position: 7% 100%
+        }
+        100% {
+            background-position: 94% 0
+        }
     }
     @keyframes backgroundkeyframe {
-        0%{background-position:94% 0}
-        50%{background-position:7% 100%}
-        100%{background-position:94% 0}
+        0% {
+            background-position: 94% 0
+        }
+        50% {
+            background-position: 7% 100%
+        }
+        100% {
+            background-position: 94% 0
+        }
     }
 
     .content-onepage {
@@ -54,7 +73,7 @@
     }
 
     .content-twopage {
-        height: 200vh!important;
+        height: 200vh !important;
     }
 
     .cloud {
@@ -128,5 +147,42 @@
 
     blockquote {
         @apply bg-gray-800 p-2 m-2 border-l-4 border-white italic;
+    }
+
+    /* Move it (define the animation) */
+    @-moz-keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @-webkit-keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .marquee-animation {
+        width: 10000px;
+
+        overflow-x: hidden;
+        position: relative;
+
+        /* Starting position */
+        transform: translateX(100%);
+        animation: marquee 3s linear infinite;
     }
 }
