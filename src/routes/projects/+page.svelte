@@ -57,7 +57,7 @@
             <div class="xl:rounded-b-3xl p-5 w-full flex justify-center bg-cyan-900 bg-opacity-25 space-x-2">
                 <Button icon="/icons/back.png" url="/">About Me</Button>
                 <Button icon="/icons/down.png" url="#projects">Projects</Button>
-                <!--<Button icon="/icons/external.png">Blog</Button>-->
+                <Button icon="/icons/external.png" url="//blog.atomtables.dev">Blog</Button>
             </div>
         </div>
 
