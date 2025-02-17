@@ -68,14 +68,6 @@
         }
     }
 
-    .content-onepage {
-        height: 100vh;
-    }
-
-    .content-twopage {
-        height: 200vh !important;
-    }
-
     .cloud {
         margin-top: 70px;
         width: 350px;

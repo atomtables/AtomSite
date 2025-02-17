@@ -1,11 +1,4 @@
 <script>
-    import {onMount, onDestroy} from "svelte";
-    import KUTE from "kute.js";
-    import { blur } from "svelte/transition";
-    import {quadInOut} from "svelte/easing";
-
-    import * as THREE from 'three';
-    import WAVES from 'vanta/dist/vanta.waves.min.js';
 
     let val = true
 
