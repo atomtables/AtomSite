@@ -3,6 +3,9 @@ import IObserver from "svelte-intersection-observer";
 import { slide } from "svelte/transition"
 import {onMount} from "svelte";
 
+// thanks to https://spencermortensen.com/
+
+
 let socialsSource = [
     {
         "image": "/images/github.webp",
@@ -31,12 +34,30 @@ let socialsSource = [
     {
         "image": "/images/icloud.png",
         "alt": "iCloud",
-        "url": "mailto:",
+        "url": "mailto:firstname-lastname website",
         "text": "Email me if you really want at",
-        "link": "adithiya.venkatakrishnan (at) atomtables (dot) dev",
-        "color": "bg-cyan-800 hover:bg-cyan-700 active:bg-cyan-600"
+        "link": "firstname-lastname website",
+        "color": "bg-cyan-800 hover:bg-cyan-700 active:bg-cyan-600",
+        special: true
     }
 ]
+
+onMount(() => {
+    document.querySelector("#text-conversion").firstChild.nodeValue = document.querySelector("#text-conversion").firstChild.nodeValue
+        .replace('-', '.')
+        .replace(' ', '@')
+        .replaceAll(' ', '.')
+        .replaceAll(new RegExp('firstname', 'g'), 'adithiya')
+        .replaceAll(new RegExp('lastname', 'g'), 'venkatakrishnan')
+        .replace('website', 'atomtables.dev');
+    document.querySelector("#text-conversion-a").href = document.querySelector("#text-conversion-a").href
+        .replace('-', '.')
+        .replace(' ', '@')
+        .replaceAll(' ', '.')
+        .replaceAll(new RegExp('firstname', 'g'), 'adithiya')
+        .replaceAll(new RegExp('lastname', 'g'), 'venkatakrishnan')
+        .replace('website', 'atomtables.dev');
+})
 </script>
 
 <div class="bg-[#001220] md:rounded-3xl bg-opacity-60 p-5 flex flex-col justify-center w-full">
@@ -45,9 +66,10 @@ let socialsSource = [
     </div>
     <hr class="p-0 m-0 my-1 bg-gray-300">
     <div class="mt-2 flex-col h-full w-full space-y-1 flex">
-        {#each socialsSource as {image, alt, url, text, link, color}, index}
+        {#each socialsSource as {image, alt, url, text, link, color, special}, index}
             <a class="rounded-2xl p-2 {color} flex flex-row h-1/2 items-center"
                href={url}
+               id={special && "text-conversion-a"}
                target="_blank" rel="noopener noreferrer"
                in:slide={{duration: 500, axis: 'x', delay: 250 + index * 250}}
             >
@@ -55,7 +77,7 @@ let socialsSource = [
                      class="h-20 w-20 mr-2 rounded-full">
                 <div class="flex flex-col truncate">
                     <div class="">{text}</div>
-                    <div class="font-bold text-2xl">{link}</div>
+                    <div class="font-bold text-2xl" id={special && "text-conversion"}>{link}</div>
                 </div>
             </a>
         {/each}
