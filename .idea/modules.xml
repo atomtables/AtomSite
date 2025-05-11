@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AtomSite.iml" filepath="$PROJECT_DIR$/.idea/AtomSite.iml" />
       <module fileurl="file://$PROJECT_DIR$/../AtomSiteBackend/.idea/AtomSiteBackend.iml" filepath="$PROJECT_DIR$/../AtomSiteBackend/.idea/AtomSiteBackend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../atomtables_website/.idea/atomtables_website.iml" filepath="$PROJECT_DIR$/../atomtables_website/.idea/atomtables_website.iml" />
     </modules>
   </component>
 </project>

@@ -33,7 +33,7 @@ let socialsSource = [
         "alt": "iCloud",
         "url": "mailto:",
         "text": "Email me if you really want at",
-        "link": "atomtables (at) icloud (dot) com",
+        "link": "adithiya.venkatakrishnan (at) atomtables (dot) dev",
         "color": "bg-cyan-800 hover:bg-cyan-700 active:bg-cyan-600"
     }
 ]
