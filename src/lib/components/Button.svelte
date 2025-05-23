@@ -1,14 +1,8 @@
 <script>
-
-
-    let innerWidth;
-    let innerHeight;
-
     export let url = "";
     export let className = "";
 
     export let icon;
-
 </script>
 
 <a href={url}
