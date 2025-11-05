@@ -32,47 +32,25 @@
             </div>
         </a>
         <a class="flex flex-col lg:flex-row items-center bg-orange-900 md:rounded-3xl bg-opacity-60 hover:bg-opacity-100 p-5"
-           href="//atomtables.github.io/TwoStepsAheadRobotics"
+           href="//phoenixphanatics.club"
            target="_blank" rel="noopener noreferrer"
            in:slide={{duration: 500, axis: 'x', delay: 500}}
         >
-            <img src="images/tsar.png" alt="Two Steps Ahead Robotics"
+            <img src="images/phoenix.png" alt="Phoenix Phanatics"
                  class="rounded-2xl mr-2 w-16 h-16 aspect-square">
             <div class="flex flex-col w-full lg:truncate text-center lg:text-left">
                 <div class="flex flex-col xl:flex-row justify-between w-full lg:truncate mb-1">
                     <div class="font-bold text-2xl lg:truncate">
-                        Two Steps Ahead
+                        Phoenix Phanatics
                     </div>
                     <div class="text-xl lg:text-2xl lg:truncate">
-                        Electronics Lead
+                        Co-Captain + Electronics
                     </div>
                 </div>
                 <div class="lg:truncate text-center lg:text-left text-sm lg:text-base">
-                    FIRST Robotics Team #10600
+                    FIRST Robotics Team #11104
                 </div>
             </div>
         </a>
-        <div class="flex flex-col lg:flex-row items-center bg-blue-900 md:rounded-3xl bg-opacity-60 hover:bg-opacity-100 p-5"
-             in:slide={{duration: 500, axis: 'x', delay: 750}}
-        >
-            <img src="images/mcacs.png"
-                 alt="Middlesex County Academy Computer Science"
-                 class="rounded-2xl mr-2 w-16 h-16 aspect-square">
-            <div class="w-full flex flex-col lg:truncate">
-                <div class="flex flex-col w-full lg:truncate text-center lg:text-left">
-                    <div class="flex flex-col xl:flex-row justify-between w-full lg:truncate mb-1">
-                        <div class="font-bold text-2xl lg:truncate">
-                            MCACS Cybersecurity
-                        </div>
-                        <div class="text-xl lg:text-2xl lg:truncate">
-                            Vice Captain
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:truncate text-center lg:text-left text-sm lg:text-base">
-                    Middlesex County Academy's Competitive Cybersecurity Team
-                </div>
-            </div>
-        </div>
     </div>
 </div>
