@@ -60,65 +60,31 @@
                 style={`transform: ${transform}; transition: transform 0.5s ease-out;`}
         >
             <div class="w-full h-full">
-                <div class="h-96 flex flex-col w-full relative md:rounded-t-3xl lg:px-0 truncate max-lg:my-5">
-                    {#if backgroundIndex !== -1}
-                        <div class="h-full flex flex-col w-full lg:flex-row relative m-0 justify-center lg:mx-auto lg:items-center" out:slide={{axis: 'x'}}>
-                            {#if preloadedImages}
-                                {#each preloadedImages as image, index}
-                                    {#if backgroundIndex === index}
-                                        <div class="flex flex-col w-full h-full relative bg-blend-darken lg:rounded-t-3xl"
-                                        >
-                                            <img
-                                                    src={image.src}
-                                                    alt="Background"
-                                                    class="absolute inset-0 w-full h-full object-cover lg:rounded-t-3xl"
-                                            />
-                                            <div class="relative w-full h-full flex justify-center items-center">
-                                                <div class={`font-semibold text-7xl sm:text-8xl md:text-9xl bg-cover bg-center
-                                [-webkit-background-clip:text] backdrop-blur-3xl rounded-2xl p-5`}
-                                                     style={`background-image: url(${image.src})`}
-                                                >
-                                                    &lt;atomtables&gt;
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/if}
-                                {/each}
-                            {:else}
-                                <div class="flex flex-col w-full h-full relative bg-blend-darken lg:rounded-3xl">
-                                    <div class="relative w-full h-full flex justify-center items-center">
-                                        <div class={`font-semibold text-6xl md:text-9xl bg-cover bg-center
-                                [-webkit-background-clip:text] backdrop-blur-3xl rounded-2xl p-5`}
-                                        >
-                                            &lt;atomtables&gt;
-                                        </div>
-                                    </div>
-                                </div>
-                            {/if}
-                        </div>
-                    {:else}
-                        <div class="h-full flex flex-col lg:flex-row relative m-0 w-max justify-center lg:mx-auto lg:items-center p-2 max-lg:mb-5" in:slide={{axis: 'x'}}>
-                            <div class="flex flex-col lg:flex-row relative m-0 w-max justify-center lg:mx-auto lg:items-center">
-                                <img
-                                        src="atomtablesPicture.jpeg"
-                                        alt="atomtables"
-                                        class="aspect-square w-48 h-48 my-2 mx-5 lg:mx-0"
-                                />
-                                <div class="pl-5 rounded-3xl text-6xl sm:text-7xl md:text-8xl font-bold w-min truncate">
-                                    Adithiya
-                                    <div class="hidden sm:block truncate">Venkatakrishnan</div>
-                                    <div class="block sm:hidden">Venkata-<br>krishnan</div>
-                                </div>
+                <div class="h-108 flex flex-col w-full relative md:rounded-t-3xl lg:px-0 truncate">
+                    <div class="absolute rounded-full bg-black aspect-square opacity-50 circle-animation"
+                        style="top: {32}px; left: {24}px; z-index: -1; transform: translate(-50%, -50%);">
+                    </div>
+                    <div class="h-full flex flex-col lg:flex-row relative m-0 w-max justify-center lg:mx-auto lg:items-center p-2 max-lg:mb-5" in:slide={{axis: 'x'}}>
+                        <div class="flex flex-col lg:flex-row relative m-0 w-max justify-center lg:mx-auto lg:items-center">
+                            <img
+                                    src="atomtablesPicture.jpeg"
+                                    alt="atomtables"
+                                    class="aspect-square w-48 h-48 my-2 mx-5 lg:mx-0"
+                            />
+                            <div class="pl-5 rounded-3xl text-6xl sm:text-7xl md:text-8xl font-bold w-min truncate">
+                                Adithiya
+                                <div class="hidden sm:block truncate">Venkatakrishnan</div>
+                                <div class="block sm:hidden">Venkata-<br>krishnan</div>
                             </div>
                         </div>
-                    {/if}
+                    </div>
                 </div>
             </div>
             <!--<div class="flex flex-col w-full relative md:rounded-3xl py-6 px-6 lg:px-0 truncate" transition:blur>
 
             </div>-->
 
-            <div class="xl:rounded-b-3xl p-5 w-full flex justify-center bg-cyan-900 bg-opacity-25 space-x-2">
+            <div class="xl:rounded-b-3xl p-5 w-full flex flex-wrap lg:justify-center bg-cyan-900 bg-opacity-25 gap-2">
                 <Button icon="/icons/down.png" url="#aboutme">About Me</Button>
                 <Button icon="/icons/forward.png" url="/projects">Projects</Button>
                 <Button icon="/icons/external.png" url="//blog.atomtables.dev">Blog</Button>

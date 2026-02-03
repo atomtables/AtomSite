@@ -10,18 +10,18 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1",
-		"@sveltejs/enhanced-img": "^0.3.0",
-		"@sveltejs/kit": "^2.5.24",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@sveltejs/enhanced-img": "^0.3.9",
+		"@sveltejs/kit": "^2.5.27",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"@types/body-scroll-lock": "^3.1.2",
 		"@types/three": "^0.170.0",
 		"autoprefixer": "^10.4.17",
 		"postcss": "^8.4.35",
-		"svelte": "^4.2.7",
+		"svelte": "^5.0.0",
 		"tailwindcss": "^3.4.1",
 		"three": "0.140.2",
 		"vanta": "^0.5.24",
-		"vite": "^5.0.3"
+		"vite": "^5.4.4"
 	},
 	"type": "module",
 	"dependencies": {

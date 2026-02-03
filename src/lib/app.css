@@ -146,4 +146,25 @@
         transform: translateX(100%);
         animation: marquee 3s linear infinite;
     }
+
+    @keyframes svgCircleBigAndSmall {
+        0% {
+            width: 100px;
+        }
+        100% {
+            width: 2400px;
+        }
+    }
+
+    .circle-animation {
+        animation: svgCircleBigAndSmall 3s ease-in-out forwards;
+    }
+
+    .h-120 {
+        height: 30rem;
+    }
+
+    .h-108 {
+        height: 27rem;
+    }
 }
