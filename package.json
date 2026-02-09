@@ -12,7 +12,7 @@
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.3.9",
 		"@sveltejs/kit": "^2.5.27",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/body-scroll-lock": "^3.1.2",
 		"@types/three": "^0.170.0",
 		"autoprefixer": "^10.4.17",
